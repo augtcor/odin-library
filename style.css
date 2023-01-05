@@ -1,4 +1,32 @@
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	margin: 1rem;
+}
+
+.form {
+	margin-left: 1rem;
+}
+
+fieldset {
+	max-width: 20rem;
+}
+
+.title,
+.author,
+.pages {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.5rem;
+}
+
+legend {
+	font-weight: bold;
+}
+
+.addToLibrary {
+	margin-top: 1rem;
 }
