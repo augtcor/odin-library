@@ -11,7 +11,7 @@
 	<body>
 		<div class="header">
 			<h1>Personal Library</h1>
-			<button id="addBook" type="submit">Add Book</button>
+			<button id="formOpenClose" type="submit">Add Book</button>
 		</div>
 		<div id="form" class="form" style="display: none">
 			<form id="formAnswers" action="#" method="post">
@@ -35,15 +35,15 @@
 				<div class="read">
 					<fieldset>
 						<legend>Book Read</legend>
-						<input type="radio" id="readYes" name="read" />
+						<input type="radio" id="read" name="read" value="Yes" />
 						<label for="read">Yes</label>
-						<input type="radio" id="readNo" name="read" />
+						<input type="radio" id="read" name="read" value="No" />
 						<label for="read">No</label>
 					</fieldset>
 				</div>
 			</form>
 			<div class="addToLibrary">
-				<button type="submit">Add to Library</button>
+				<button id="addToLibrary" type="submit">Add to Library</button>
 			</div>
 		</div>
 		<div class="main"></div>
