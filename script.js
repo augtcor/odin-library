@@ -31,8 +31,6 @@ addBook.addEventListener("click", () => {
 
 	const book = new Book(title, author, pages, read);
 
-	console.log(myLibrary);
-
 	for (let key in book) {
 		if (book[key] === "") {
 			return;
