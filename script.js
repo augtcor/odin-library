@@ -37,7 +37,45 @@ addBook.addEventListener("click", () => {
 		} else {
 			myLibrary.push(book);
 			formAnswers.reset();
-			return;
 		}
 	}
+
+	addCard();
 });
+
+//Add book card to page
+function addCard() {
+	let grid = document.querySelector(".grid");
+	let card = document.createElement("div");
+	card.setAttribute("id", "card");
+	grid.appendChild(card);
+
+	let bookTitle = document.createElement("p");
+	bookTitle.setAttribute("id", "bookTitle");
+	card.appendChild(bookTitle);
+
+	let bookAuthor = document.createElement("p");
+	bookAuthor.setAttribute("id", "bookAuthor");
+	card.appendChild(bookAuthor);
+
+	let bookPages = document.createElement("p");
+	bookPages.setAttribute("id", "bookPages");
+	card.appendChild(bookPages);
+
+	let contentTitle = document.createTextNode(
+		myLibrary[myLibrary.length - 1].title
+	);
+	bookTitle.appendChild(contentTitle);
+
+	let contentAuthor = document.createTextNode(
+		myLibrary[myLibrary.length - 1].author
+	);
+	bookAuthor.appendChild(contentAuthor);
+
+	let contentPages = document.createTextNode(
+		myLibrary[myLibrary.length - 1].pages
+	);
+	bookPages.appendChild(contentPages);
+
+	return;
+}
