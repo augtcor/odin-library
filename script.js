@@ -1,10 +1,9 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages) {
 	this.title = title;
 	this.author = author;
 	this.pages = pages;
-	this.read = read;
 }
 
 const form = document.getElementById("form");
@@ -15,9 +14,11 @@ const formOpenClose = document.getElementById("formOpenClose");
 formOpenClose.addEventListener("click", () => {
 	if (form.style.display === "none") {
 		form.style.display = "block";
+		formOpenClose.innerText = "Close";
 		formAnswers.reset();
 	} else {
 		form.style.display = "none";
+		formOpenClose.innerText = "New Book";
 	}
 });
 
@@ -27,9 +28,8 @@ addBook.addEventListener("click", () => {
 	let title = document.getElementById("title").value;
 	let author = document.getElementById("author").value;
 	let pages = document.getElementById("pages").value;
-	let read = document.querySelector('input[name="read"]:checked').value;
 
-	const book = new Book(title, author, pages, read);
+	const book = new Book(title, author, pages);
 
 	for (let key in book) {
 		if (book[key] === "") {
@@ -47,7 +47,7 @@ addBook.addEventListener("click", () => {
 function addCard() {
 	let grid = document.querySelector(".grid");
 	let card = document.createElement("div");
-	card.setAttribute("id", "card");
+	card.setAttribute("class", "card");
 	grid.appendChild(card);
 
 	let bookTitle = document.createElement("p");

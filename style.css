@@ -1,10 +1,52 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .header {
-	margin: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 3rem;
+	box-shadow: rgba(100, 100, 100, 0.2) 0px 3px 3px;
+}
+
+#pageTitle {
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+
+.main {
+	background-color: rgba(100, 100, 100, 0.1);
+	height: 100vh;
+}
+
+#formOpenClose {
+	margin-top: 2rem;
+	margin-left: 1rem;
+	margin-bottom: 2rem;
+	border-style: none;
+	border-radius: 0.3rem;
+	background-color: rgba(100, 100, 100, 0.1);
+	font-size: 1.2rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#formOpenClose:hover {
+	background-color: rgba(100, 100, 100, 0.2);
+}
+
+#formOpenClose,
+#addToLibrary {
+	width: 8rem;
+	height: 3rem;
+}
+
+.formButton {
+	display: flex;
+	justify-content: center;
 }
 
 .form {
@@ -29,4 +71,21 @@ legend {
 
 .addToLibrary {
 	margin-top: 1rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+.card {
+	margin-right: 1rem;
+	padding-left: 1rem;
+	background-color: white;
+	border-radius: 0.3rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }

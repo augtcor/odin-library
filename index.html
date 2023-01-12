@@ -10,43 +10,40 @@
 	</head>
 	<body>
 		<section class="header">
-			<h1>Personal Library</h1>
-			<button id="formOpenClose" type="submit">Add Book</button>
-		</section>
-		<section id="form" class="form" style="display: none">
-			<form id="formAnswers" action="#" method="post">
-				<div class="bookInfo">
-					<fieldset>
-						<legend>Book Info</legend>
-						<div class="title">
-							<label for="title">Title</label>
-							<input type="text" id="title" name="title" />
-						</div>
-						<div class="author">
-							<label for="author">Author</label>
-							<input type="text" id="author" name="author" />
-						</div>
-						<div class="pages">
-							<label for="pages">Pages</label>
-							<input type="number" id="pages" name="pages" />
-						</div>
-					</fieldset>
-				</div>
-				<div class="read">
-					<fieldset>
-						<legend>Book Read</legend>
-						<input type="radio" id="read" name="read" value="Yes" />
-						<label for="read">Yes</label>
-						<input type="radio" id="readN" name="read" value="No" />
-						<label for="read">No</label>
-					</fieldset>
-				</div>
-			</form>
-			<div class="addToLibrary">
-				<button id="addToLibrary" type="submit">Add to Library</button>
-			</div>
+			<p id="pageTitle">Personal Library</p>
 		</section>
 		<section class="main">
+			<div class="formButton">
+				<button id="formOpenClose" type="submit">Add Book</button>
+			</div>
+
+			<div id="form" class="form" style="display: none">
+				<form id="formAnswers" action="#" method="post">
+					<div class="bookInfo">
+						<fieldset>
+							<legend>Book Info</legend>
+							<div class="title">
+								<label for="title">Title</label>
+								<input type="text" id="title" name="title" />
+							</div>
+							<div class="author">
+								<label for="author">Author</label>
+								<input type="text" id="author" name="author" />
+							</div>
+							<div class="pages">
+								<label for="pages">Pages</label>
+								<input type="number" id="pages" name="pages" />
+							</div>
+						</fieldset>
+					</div>
+				</form>
+				<div class="addToLibrary">
+					<button id="addToLibrary" type="submit">
+						Add to Library
+					</button>
+				</div>
+			</div>
+
 			<div class="grid"></div>
 		</section>
 	</body>
