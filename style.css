@@ -7,9 +7,9 @@ body {
 
 .header {
 	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
 	padding-left: 3rem;
 	box-shadow: rgba(100, 100, 100, 0.2) 0px 3px 3px;
+	height: 10vh;
 }
 
 #pageTitle {
@@ -19,13 +19,11 @@ body {
 
 .main {
 	background-color: rgba(100, 100, 100, 0.1);
-	height: 100vh;
+	height: calc(90vh - 8px);
 }
 
-#formOpenClose {
+#formOpen {
 	margin-top: 2rem;
-	margin-left: 1rem;
-	margin-bottom: 2rem;
 	border-style: none;
 	border-radius: 0.3rem;
 	background-color: rgba(100, 100, 100, 0.1);
@@ -34,11 +32,11 @@ body {
 	cursor: pointer;
 }
 
-#formOpenClose:hover {
+#formOpen:hover {
 	background-color: rgba(100, 100, 100, 0.2);
 }
 
-#formOpenClose,
+#formOpen,
 #addToLibrary {
 	width: 8rem;
 	height: 3rem;
@@ -62,9 +60,10 @@ body {
 
 .form {
 	margin: 15% auto;
-	padding: 1rem;
+	padding: 2rem 1rem;
 	width: 20rem;
 	background-color: white;
+	border-radius: 0.3rem;
 }
 
 #page-mask {
@@ -102,8 +101,6 @@ legend {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: repeat(5, 1fr);
-	margin-top: 1rem;
-	margin-bottom: 1rem;
 	margin-left: 1rem;
 }
 

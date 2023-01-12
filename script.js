@@ -11,7 +11,7 @@ const formAnswers = document.getElementById("formAnswers");
 
 //Open and close form to add new book
 const modal = document.getElementById("modal");
-const btn = document.getElementById("formOpenClose");
+const btn = document.getElementById("formOpen");
 const mask = document.getElementById("page-mask");
 
 btn.onclick = function () {
@@ -41,6 +41,8 @@ addBook.addEventListener("click", () => {
 		} else {
 			myLibrary.push(book);
 			formAnswers.reset();
+			modal.style.display = "none";
+			mask.style.display = "none";
 		}
 	}
 
