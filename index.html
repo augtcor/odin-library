@@ -17,10 +17,10 @@
 				<button id="formOpenClose" type="submit">Add Book</button>
 			</div>
 
-			<div id="form" class="form" style="display: none">
-				<form id="formAnswers" action="#" method="post">
-					<div class="bookInfo">
-						<fieldset>
+			<div id="modal">
+				<div id="form" class="form">
+					<form id="formAnswers" action="#" method="post">
+						<fieldset class="bookInfo">
 							<legend>Book Info</legend>
 							<div class="title">
 								<label for="title">Title</label>
@@ -35,16 +35,18 @@
 								<input type="number" id="pages" name="pages" />
 							</div>
 						</fieldset>
+					</form>
+
+					<div class="addToLibrary">
+						<button id="addToLibrary" type="submit">
+							Add to Library
+						</button>
 					</div>
-				</form>
-				<div class="addToLibrary">
-					<button id="addToLibrary" type="submit">
-						Add to Library
-					</button>
 				</div>
 			</div>
 
 			<div class="grid"></div>
 		</section>
+		<div id="page-mask"></div>
 	</body>
 </html>

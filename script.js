@@ -10,17 +10,21 @@ const form = document.getElementById("form");
 const formAnswers = document.getElementById("formAnswers");
 
 //Open and close form to add new book
-const formOpenClose = document.getElementById("formOpenClose");
-formOpenClose.addEventListener("click", () => {
-	if (form.style.display === "none") {
-		form.style.display = "block";
-		formOpenClose.innerText = "Close";
-		formAnswers.reset();
-	} else {
-		form.style.display = "none";
-		formOpenClose.innerText = "New Book";
+const modal = document.getElementById("modal");
+const btn = document.getElementById("formOpenClose");
+const mask = document.getElementById("page-mask");
+
+btn.onclick = function () {
+	modal.style.display = "block";
+	mask.style.display = "block";
+};
+
+window.onclick = function (event) {
+	if (event.target === modal) {
+		modal.style.display = "none";
+		mask.style.display = "none";
 	}
-});
+};
 
 //Add book to library
 const addBook = document.getElementById("addToLibrary");
